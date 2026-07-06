@@ -253,7 +253,7 @@ cmd({
 }, async (conn, mek, m, { isOwner, reply, config }) => {
     if (!isOwner) return reply(`${toFancy('Owner Only')} 😎`);
     
-    const settings = `╭─── ${toFancy('All Settings')} ───╮\n│ ${toFancy('Bot Name')}: 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪\n│ ${toFancy('Prefix')}: ${config.PREFIX}\n│ ${toFancy('Mode')}: ${config.WORK_TYPE}\n│ ${toFancy('Auto Recording')}: ${config.AUTO_RECORDING}\n│ ${toFancy('Auto Typing')}: ${config.AUTO_TYPING}\n│ ${toFancy('Anti Call')}: ${config.ANTI_CALL}\n│ ${toFancy('Welcome')}: ${config.WELCOME}\n│ ${toFancy('Goodbye')}: ${config.GOODBYE}\n│ ${toFancy('Auto Read')}: ${config.READ_MESSAGE}\n│ ${toFancy('Auto View Status')}: ${config.AUTO_VIEW_STATUS}\n│ ${toFancy('Auto Like Status')}: ${config.AUTO_LIKE_STATUS}\n╰────────────────────────╯`;
+    const settings = `╭─── ${toFancy('All Settings')} ───╮\n│ ${toFancy('Bot Name')}:𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃\n│ ${toFancy('Prefix')}: ${config.PREFIX}\n│ ${toFancy('Mode')}: ${config.WORK_TYPE}\n│ ${toFancy('Auto Recording')}: ${config.AUTO_RECORDING}\n│ ${toFancy('Auto Typing')}: ${config.AUTO_TYPING}\n│ ${toFancy('Anti Call')}: ${config.ANTI_CALL}\n│ ${toFancy('Welcome')}: ${config.WELCOME}\n│ ${toFancy('Goodbye')}: ${config.GOODBYE}\n│ ${toFancy('Auto Read')}: ${config.READ_MESSAGE}\n│ ${toFancy('Auto View Status')}: ${config.AUTO_VIEW_STATUS}\n│ ${toFancy('Auto Like Status')}: ${config.AUTO_LIKE_STATUS}\n╰────────────────────────╯`;
     
     reply(settings);
 });
