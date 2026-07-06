@@ -25,7 +25,7 @@ cmd({
 
         const status = args[0]?.toLowerCase();
         const msg = await conn.sendMessage(from, {
-            text: `ᥫ᭡𝛧𝜜𝛪𝐷𝛪 𝛭𝐷 𝐵𝜣𝑇 𓆩 𝐀𝐍𝐓𝐈-𝐂𝐀𝐋𝐋 𓆪 ⏤͟͟͞͞🧸🌷`
+            text: `ᥫ 𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃 𝐵𝜣𝑇 𓆩 𝐀𝐍𝐓𝐈-𝐂𝐀𝐋𝐋 𓆪 ⏤͟͟͞͞🧸🌷`
         }, { quoted: mek });
 
         await sleep(1500);
@@ -34,7 +34,7 @@ cmd({
 
         if (status === "on") {
             config.ANTI_CALL = "true";
-            display = `╭═══ 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 ═══⊷
+            display = `╭═══ 𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃 ═══⊷
 ┃❃╭──────────────
 ┃❃│ 📵 ${toFancy('Anti-Call')}
 ┃❃│ ✅ ${toFancy('Status')}: ${toFancy('Activated')}
@@ -45,7 +45,7 @@ cmd({
 > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʑɑ͢ı֟፝𝛛֟ı֟፝-ϻ֟͡𝛛֟`;
         } else if (status === "off") {
             config.ANTI_CALL = "false";
-            display = `╭═══ 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 ═══⊷
+            display = `╭═══ 𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃 ═══⊷
 ┃❃╭──────────────
 ┃❃│ 📵 ${toFancy('Anti-Call')}
 ┃❃│ ❌ ${toFancy('Status')}: ${toFancy('Deactivated')}
@@ -55,7 +55,7 @@ cmd({
 
 > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʑɑ͢ı֟፝𝛛֟ı֟፝-ϻ֟͡𝛛֟`;
         } else {
-            display = `╭═══ 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 ═══⊷
+            display = `╭═══ 𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃 ═══⊷
 ┃❃╭──────────────
 ┃❃│ 📵 ${toFancy('Anti-Call')}
 ┃❃│ ⚠️ ${toFancy('Invalid Option')}
@@ -63,7 +63,7 @@ cmd({
 ┃❃╰───────────────
 ╰═════════════════⊷
 
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʑɑ͢ı֟፝𝛛֟ı֟፝-ϻ֟͡𝛛֟`;
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜᴀᴛʜᴜᴡᴀ`;
         }
 
         await conn.relayMessage(from, {
