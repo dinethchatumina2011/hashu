@@ -28,12 +28,12 @@ cmd({
 
         // 🎨 Fancy Output with Box Design
         const msg = await conn.sendMessage(from, {
-            text: `ᥫ᭡𝛧𝜜𝛪𝐷𝛪 𝛭𝐷 𝐵𝜣𝑇 𓆩 𝐀𝐋𝐈𝐕𝐄 𓆪 ⏤͟͟͞͞🧸🌷`
+            text: `ＣＨＡＴＨＵＷＡ－ＸＭＤ`
         }, { quoted: mek });
 
         await sleep(1500);
 
-        const display = `╭═══ 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 ═══⊷
+        const display = `╭═══ 𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃 ═══⊷
 ┃❃╭──────────────
 ┃❃│ 👤 ${pushname}
 ┃❃│ ⏰ ${currentTime}
@@ -43,7 +43,7 @@ cmd({
 ┃❃╰───────────────
 ╰═════════════════⊷
 
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʑɑ͢ı֟፝𝛛֟ı֟፝-ϻ֟͡𝛛֟`;
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜᴀᴛʜᴜᴡᴀ`;
 
         await conn.relayMessage(from, {
             protocolMessage: {
@@ -59,15 +59,15 @@ cmd({
 
         // Send Image with Newsletter
         await conn.sendMessage(from, {
-            image: { url: "https://up6.cc/2026/05/177971006919991.png" },
+            image: { url: "https://cdn.phototourl.com/free/2026-06-30-6f0acaed-3fbd-40fc-b215-31440c3310e8.jpg" },
             caption: `✨ ${pushname}, Bot is Active!`,
             contextInfo: {
                 forwardingScore: 999,
                 isForwarded: true,
                 mentionedJid: [m.sender],
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: "120363423196146172@newsletter",
-                    newsletterName: "𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪",
+                    newsletterJid: "120363424546838736@newsletter",
+                    newsletterName: "𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃",
                     serverMessageId: 2,
                 },
             },
