@@ -16,9 +16,9 @@ module.exports = {
     // 2. INFORMATIONS DU BOT
     // ===========================================================
     PREFIX: process.env.PREFIX || '.',
-    OWNER_NUMBER: process.env.OWNER_NUMBER || '+923237045919', // Mettez votre numéro ici
-    BOT_NAME: "𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪",
-    BOT_FOOTER: '© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʑɑ͢ı֟፝𝛛֟ı֟፝-ϻ֟͡𝛛֟',
+    OWNER_NUMBER: process.env.OWNER_NUMBER || '+94741336839', // Mettez votre numéro ici
+    BOT_NAME: "𝙲𝙷𝙰𝚃𝙷𝚄𝚆𝙰-𝚇𝙼𝙳",
+    BOT_FOOTER: '© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜᴀᴛʜᴜᴡᴀ',
     
     // Mode de travail : public, private, group, inbox
     WORK_TYPE: process.env.WORK_TYPE || "public", 
@@ -50,7 +50,7 @@ module.exports = {
     WELCOME_IMAGE: process.env.WELCOME_IMAGE || null, 
     GOODBYE_IMAGE: process.env.GOODBYE_IMAGE || null,
     
-    GROUP_INVITE_LINK: process.env.GROUP_INVITE_LINK || 'https://chat.whatsapp.com/B9aQvczskhr7gekKrAjCsm?s=cl&p=a&mlu=0&amv=1',
+    GROUP_INVITE_LINK: process.env.GROUP_INVITE_LINK || 'https://chat.whatsapp.com/Inhb4ts1A7zAYnQvjW6Ekv',
     
     // ===========================================================
     // 6. SÉCURITÉ & ANTI-CALL
@@ -62,13 +62,13 @@ module.exports = {
     // 7. IMAGES & LIENS
     // ===========================================================
     IMAGE_PATH: 'https://files.catbox.moe/himp43.jpg',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbBhyp7BfxoEclHqI33Y',
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb6zdUyFsn0cyFknXz2t',
     
     // ===========================================================
     // 8. EXTERNAL API (Optionnel)
     // ===========================================================
-    TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN || '7214172448:AAHGqSgaw-zGVPZWvl8msDOVDhln-9kExas',
-    TELEGRAM_CHAT_ID: process.env.  TELEGRAM_CHAT_ID || '+923197517042'
+    TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN || '741336839:AAHGqSgaw-zGVPZWvl8msDOVDhln-9kExas',
+    TELEGRAM_CHAT_ID: process.env.  TELEGRAM_CHAT_ID || '+94741336839'
     
 };
   
