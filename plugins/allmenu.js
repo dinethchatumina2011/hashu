@@ -34,7 +34,7 @@ cmd({
         const date = moment().tz("Africa/Kampala").format("dddd, DD MMMM YYYY");
 
         // 🎨 Build Menu
-        let menu = `*╭═══ 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 ═══⊷*\n`;
+        let menu = `*╭═══ 𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃 ═══⊷*\n`;
         menu += `*┃❃╭──────────────*\n`;
         menu += `*┃❃│ ⏰ ᴛɪᴍᴇ: ${time}*\n`;
         menu += `*┃❃│ 📅 ᴅᴀᴛᴇ: ${date}*\n`;
@@ -76,19 +76,19 @@ cmd({
         }
 
         // Footer
-        menu += `*> 𝛲𝜣𝑊𝛯𝑅𝛯𝐷 𝐵𝜳 𝛧𝜟𝛪𝐷𝛪 𝛭𝐷 ᥫ᭡*`;
+        menu += `*> 𝛲𝜣𝑊𝛯𝑅𝛯𝐷 𝐵𝜳 𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃ᥫ᭡*`;
 
         // Send Menu with Image
         await conn.sendMessage(from, {
-            image: { url: "https://up6.cc/2026/05/177971006919991.png" },
+            image: { url: "https://cdn.phototourl.com/free/2026-06-30-6f0acaed-3fbd-40fc-b215-31440c3310e8.jpg" },
             caption: menu,
             contextInfo: {
                 forwardingScore: 999,
                 isForwarded: true,
                 mentionedJid: [m.sender],
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: "120363423196146172@newsletter",
-                    newsletterName: "𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪",
+                    newsletterJid: "120363424546838736@newsletter",
+                    newsletterName: "𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃",
                     serverMessageId: 2,
                 },
             },
