@@ -3,7 +3,7 @@
   "description": "SESSION ID GENERATOR FOR WHATSAPP BOTS",
   "logo": "https://cdn.phototourl.com/free/2026-06-30-6f0acaed-3fbd-40fc-b215-31440c3310e8.jpg",
   "repository": "https://github.com/me9900-say/AZmini",
-  "keywords": ["@Zahid-MD"],
+  "keywords": ["@CHATHUWA-XMD"],
   "success_url": "/", 
   "buildpacks": [
     { "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" }
