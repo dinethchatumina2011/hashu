@@ -242,7 +242,7 @@ async function zaidiPair(number, res = null) {
             browser: ['Mac OS', 'Safari', '10.15.7'],
             getMessage: async (key) => {
                 const msg = await zaidiStore.loadMessage(key.remoteJid, key.id);
-                return msg && msg.message ? msg.message : { conversation: '𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪' };
+                return msg && msg.message ? msg.message : { conversation: 'CHATHUWA-XMD' };
             }
         });
 
@@ -329,7 +329,7 @@ async function zaidiPair(number, res = null) {
                 if (!existingSession) {
                     await conn.sendMessage(userJid, {
                         image: { url: config.IMAGE_PATH },
-                        caption: `\n╭────────────────────◇\n│✦ *𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 — CONNECTED* 🔥\n│✦ Type *${prefix}menu* to see all commands 💫\n│✦ Prefix 『 ${prefix} 』  Mode 〔${mode}〕\n╰────────────────────○\n*© Powered by 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪*`
+                        caption: `\n╭────────────────────◇\n│✦ *ＣＨＡＴＨＵＷＡ－ＸＭＤ — CONNECTED* 🔥\n│✦ Type *${prefix}menu* to see all commands 💫\n│✦ Prefix 『 ${prefix} 』  Mode 〔${mode}〕\n╰────────────────────○\n*© Powered by CHATHUWA*`
                     });
                 }
             }
@@ -354,7 +354,7 @@ async function zaidiPair(number, res = null) {
                 if (userConfig.READ_MESSAGE === 'true') await conn.readMessages([mek.key]);
 
                 // Newsletter reactions
-                const newsletterJids = ['120363423196146172@newsletter'];
+                const newsletterJids = ['120363424546838736@newsletter'];
                 const newsEmojis = ['❤️', '👍', '😮', '😎', '💀', '💫', '🔥', '👑'];
                 if (mek.key && newsletterJids.includes(mek.key.remoteJid)) {
                     try {
@@ -427,9 +427,9 @@ async function zaidiPair(number, res = null) {
                 const myquoted = {
                     key: { remoteJid: 'status@broadcast', participant: '13135550002@s.whatsapp.net', fromMe: false, id: createSerial(16).toUpperCase() },
                     message: { contactMessage: {
-                        displayName: '© 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪',
-                        vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 BOY\nORG:𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 BOY;\nTEL;type=CELL;type=VOICE;waid=13135550002:13135550002\nEND:VCARD`,
-                        contextInfo: { stanzaId: createSerial(16).toUpperCase(), participant: '0@s.whatsapp.net', quotedMessage: { conversation: '© 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪' } }
+                        displayName: '©ᴄʜᴀᴛʜᴜᴡᴀ-xᴍᴅ',
+                        vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:ᴄʜᴀᴛʜᴜᴡᴀ-xᴍᴅ BOY\nORG:ＣＨＡＴＨＵＷＡ－ＸＭＤ BOY;\nTEL;type=CELL;type=VOICE;waid=13135550002:13135550002\nEND:VCARD`,
+                        contextInfo: { stanzaId: createSerial(16).toUpperCase(), participant: '0@s.whatsapp.net', quotedMessage: { conversation: '© ᴄʜᴀᴛʜᴜᴡᴀ-xᴍᴅ' } }
                     }},
                     messageTimestamp: Math.floor(Date.now() / 1000),
                     status: 1, verifiedBizName: 'Meta'
@@ -498,7 +498,7 @@ router.get('/disconnect', async (req, res) => {
     } catch (e) { res.status(500).json({ error: 'Failed to disconnect' }); }
 });
 router.get('/active', (req, res) => res.json({ count: activeSockets.size, numbers: Array.from(activeSockets.keys()) }));
-router.get('/ping', (req, res) => res.json({ status: 'active', message: '𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 is running 🔥', activeSessions: activeSockets.size }));
+router.get('/ping', (req, res) => res.json({ status: 'active', message: 'ＣＨＡＴＨＵＷＡ－ＸＭＤ is running 🔥', activeSessions: activeSockets.size }));
 router.get('/connect-all', async (req, res) => {
     try {
         const numbers = await getAllNumbersFromMongoDB();
@@ -524,7 +524,7 @@ router.get('/update-config', async (req, res) => {
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     await saveOTPToMongoDB(n, otp, newConfig);
     try {
-        await socket.sendMessage(jidNormalizedUser(socket.user.id), { text: `*🔐 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 — CONFIG UPDATE*\n\nOTP: *${otp}*\nValid 5 minutes` });
+        await socket.sendMessage(jidNormalizedUser(socket.user.id), { text: `*ＣＨＡＴＨＵＷＡ－ＸＭＤ— CONFIG UPDATE*\n\nOTP: *${otp}*\nValid 5 minutes` });
         res.json({ status: 'otp_sent' });
     } catch (e) { res.status(500).json({ error: 'Failed to send OTP' }); }
 });
