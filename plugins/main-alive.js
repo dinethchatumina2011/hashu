@@ -9,9 +9,9 @@ const funnyReplies = [
     "🤖 *Robot zinda hai!* Kya aapko lagta hai main mar gaya tha? 😂",
     "🔥 *Alive hoon bhai!* Chal ab batao kya karna hai? 💪",
     "⚡ *Main toh kabhi marta nahi!* Just like cockroach 😂",
-    "👑 *Zaidy-MD is alive!* ab main soch raha hoon, kya aap bhi alive ho? 😂",
+    "👑 *chathuwa xmd is alive!* ab main soch raha hoon, kya aap bhi alive ho? 😂",
     "🚀 *Alive hai boss!* Ready to dominate WhatsApp! 😎",
-    "💀 *Zinda hoon!* lekin neend aa rahi hai... 😴",
+    "💀 *chathuwa hoon!* lekin neend aa rahi hai... 😴",
     "🐱 *Main alive hoon!* Aur aap mere 9 lives mein se 8 bacha kar rakhe hain! 😹",
     "🤣 *Alive hoon!* Kya aapko laga main hamesha ke liye so gaya? Nahi yaar!",
     "🎯 *Alive hoon!* Target practice ke liye ready! 😎",
@@ -49,7 +49,7 @@ cmd({
 ┃❃╭──────────────
 ┃❃│ ${randomFunny}
 ┃❃│ ──────────────
-┃❃│ 🤖 Bot: 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪
+┃❃│ 🤖 Bot: 𝗖𝗛𝗔𝗧𝗛𝗨𝗪𝗔-𝗫𝗠𝗗
 ┃❃│ 📊 Mode: ${config.WORK_TYPE || 'public'}
 ┃❃│ 🔣 Prefix: ${config.PREFIX || '.'}
 ┃❃│ 📦 Commands: ${totalCmds}
@@ -58,7 +58,7 @@ cmd({
 ┃❃╰───────────────
 ╰═════════════════⊷
 
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪`;
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜᴀᴛʜᴜᴡᴀ-xᴍᴅ`;
 
         await conn.sendMessage(from, {
             text: status,
