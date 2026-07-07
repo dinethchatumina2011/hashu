@@ -55,7 +55,7 @@ cmd({
         text += `┃  ═══════════════════════\n`;
         text += `┃  🔹 *${videos.length} videos found*\n`;
         text += `╰━━━━━━━━━━━━━━━━━━━━━━╯\n\n`;
-        text += `> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪`;
+        text += `> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜᴀᴛʜᴜᴡᴀ-xᴍᴅ`;
 
         await conn.sendMessage(
             from,
