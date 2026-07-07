@@ -22,4 +22,3 @@ const setAntideleteStatus = async (chatId, status) => {
 };
 
 module.exports = { Antidelete, getAntideleteStatus, setAntideleteStatus };
-// POWERED BY ZAIDI-TEXK 
