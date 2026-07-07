@@ -1,466 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>👑 ＣＨＡＴＨＵＷＡ－ＸＭＤ 👑</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-/* ===============================
-   RGB NEON RAINBOW EDITION
-   Full Replacement CSS
-=============================== */
-
-/* =========================
-   BLACK UI + RGB TEXT ONLY
-========================= */
-
-:root{
-    --rgb-speed:16s;
-}
-
-/* reset */
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-/* rainbow text animation */
-@keyframes rgbText{
-    0%{background-position:0%}
-    100%{background-position:400%}
-}
-
-/* body */
-body{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family:'Poppins',sans-serif;
-    background:#000;
-    color:#fff;
-}
-
-/* card */
-.card{
-    width:90%;
-    max-width:400px;
-    background:#000;
-    border-radius:22px;
-    padding:28px 22px;
-    text-align:center;
-    border:1px solid #111;
-
-    box-shadow:
-        0 0 20px rgba(255,255,255,0.05);
-}
-
-/* RGB TEXT STYLE */
-.rgb-text{
-    background:linear-gradient(
-        90deg,
-        red,orange,yellow,green,cyan,blue,violet,red
-    );
-    background-size:400%;
-    animation:rgbText var(--rgb-speed) linear infinite;
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-/* title */
-h1{
-    font-size:1.9rem;
-    margin-bottom:6px;
-}
-
-/* status */
-.status{
-    font-size:.8rem;
-    letter-spacing:1px;
-    margin-bottom:22px;
-}
-
-/* input wrapper */
-.input-wrap{
-    background:#000;
-    border-radius:14px;
-    padding:2px;
-    margin-bottom:16px;
-    border:1px solid #111;
-}
-
-/* input */
-input{
-    width:100%;
-    border:none;
-    outline:none;
-    padding:14px;
-    border-radius:12px;
-    background:#000;
-    color:#fff;
-    text-align:center;
-    font-size:1rem;
-}
-
-input::placeholder{
-    color:#555;
-}
-
-/* button */
-button{
-    width:100%;
-    border:1px solid #111;
-    border-radius:14px;
-    padding:14px;
-    font-size:1rem;
-    font-weight:600;
-    cursor:pointer;
-    background:#000;
-    color:#fff;
-    transition:.2s;
-}
-
-button:hover{
-    background:#111;
-}
-
-/* result */
-#result{
-    margin-top:20px;
-    min-height:60px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:10px;
-}
-
-/* code display */
-.code-display{
-    padding:10px 18px;
-    border-radius:12px;
-    border:1px dashed #222;
-    letter-spacing:4px;
-    cursor:pointer;
-    background:#000;
-}
-
-/* loader */
-.loader{
-    width:28px;
-    height:28px;
-    border:3px solid #222;
-    border-top:3px solid #fff;
-    border-radius:50%;
-    animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-    to{transform:rotate(360deg)}
-}
-
-/* footer */
-footer{
-    margin-top:18px;
-    font-size:.7rem;
-    color:#555;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 CHATHUWA-XMD 👑</title>
     
-/* ===== RGB BORDER INPUT ===== */
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-@keyframes rgbMove{
-    0%{background-position:0%}
-    100%{background-position:300%}
-}
+    <style>
+        /* Modern Minimalist Premium UI Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
 
-@keyframes rgbText{
-    0%{background-position:0%}
-    100%{background-position:400%}
-}
-/* =========================================
-   UPDATED RGB NEON RAINBOW CSS
-   ========================================= */
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top right, #1a1c29, #0e1017);
+            color: #f3f4f6;
+            padding: 20px;
+        }
 
-/* Input Box Container (Tight RGB Border) */
-.rgb-box {
-    padding: 2px; /* Border ki thickness */
-    border-radius: 12px;
-    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet, red);
-    background-size: 300%;
-    animation: rgbMove 4s linear infinite;
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto 20px auto;
-}
+        /* Sleek Glassmorphism Card Design */
+        .card {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(25, 28, 41, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 35px 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
 
-/* Input Field (Pure Black Background + White Text) */
-.rgb-box input {
-    width: 100%;
-    border: none;
-    outline: none;
-    padding: 14px;
-    border-radius: 11px; /* Inner radius slightly smaller than outer */
-    background: #000; /* Pure Black */
-    color: #fff; /* Typing color White */
-    text-align: center;
-    font-size: 1.1rem;
-    font-family: 'Poppins', sans-serif;
-    -webkit-text-fill-color: #fff; /* Ensure text is white */
-}
+        /* Premium Brand Styling */
+        h1.main-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
 
-/* Placeholder Color */
-.rgb-box input::placeholder {
-    color: #555;
-    -webkit-text-fill-color: #555;
-}
+        h2.sub-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #6366f1; /* Premium Indigo Accent */
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-/* Get Code Button (Matching Style) */
-.rgb-btn {
-    width: 100%;
-    max-width: 320px;
-    padding: 2px; /* Border space */
-    border-radius: 12px;
-    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet, red);
-    background-size: 300%;
-    animation: rgbMove 4s linear infinite;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.2s;
-}
+        .status-text {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #9ca3af;
+            margin-bottom: 12px;
+            text-align: left;
+            padding-left: 5px;
+        }
 
-/* Inner Button Background */
-.btn-inner {
-    background: #000;
-    color: #fff;
-    display: block;
-    padding: 12px;
-    border-radius: 11px;
-    font-weight: 700;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
+        /* Container & Input Styling */
+        .input-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
 
-.rgb-btn:hover {
-    transform: scale(1.03);
-}
+        input.inner-box {
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            outline: none;
+            padding: 16px;
+            border-radius: 14px;
+            background: rgba(10, 11, 18, 0.5);
+            color: #ffffff;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
 
-/* Animations */
-@keyframes rgbMove {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 300% 50%; }
-}
+        input.inner-box:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+            background: rgba(10, 11, 18, 0.8);
+        }
 
-@keyframes rgbText {
-    0% { background-position: 0%; }
-    100% { background-position: 400%; }
-}/* Permanent Result Box with RGB Border */
-.result-box {
-    width: 100%;
-    max-width: 320px;
-    margin: 20px auto;
-    padding: 2px; /* Border ki thickness */
-    border-radius: 15px;
-    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet, red);
-    background-size: 400%;
-    animation: rgbMove 5s linear infinite;
-    position: relative;
-}
+        input::placeholder {
+            color: #4b5563;
+        }
 
-/* Inner Black Area */
-.result-inner {
-    background: #000;
-    border-radius: 13px;
-    padding: 15px;
-    min-height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-align: center;
-}
+        /* Premium Accent Button */
+        button.btn-action {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 16px;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            background: #6366f1;
+            color: #ffffff;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-/* Code Display Styling */
-#codeBox {
-    letter-spacing: 4px;
-    color: #fff;
-    cursor: pointer;
-}
+        button.btn-action:hover {
+            background: #4f46e5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
 
-@keyframes rgbMove {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
+        button.btn-action:active {
+            transform: translateY(0);
+        }
 
-/* Base Container */
-.rgb-container {
-    padding: 5px; /* Border Thickness */
-    position: relative;
-    border-radius: 15px;
-    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet, red, orange, yellow);
-    background-size: 200% 100%;
-    width: 100%;
-    max-width: 320px;
-    margin: 15px auto;
-}
+        /* Result Display Box */
+        .result-container {
+            margin-top: 20px;
+            width: 100%;
+            background: rgba(99, 102, 241, 0.06);
+            border: 1px dashed rgba(99, 102, 241, 0.3);
+            border-radius: 14px;
+            padding: 18px;
+            transition: all 0.3s ease;
+        }
 
-/* 1st & 3rd Box: Right ki taraf chalne wala */
-.move-right {
-    animation: scrollRight 3s linear infinite;
-}
+        #codeBox {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #ffffff;
+            cursor: pointer;
+            word-wrap: break-word;
+        }
 
-/* 2nd Box: Left ki taraf chalne wala */
-.move-left {
-    animation: scrollLeft 3s linear infinite;
-}
+        /* Footer Info styling */
+        .footer-info {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
-/* Animations Logic */
-@keyframes scrollRight {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 200% 0%; }
-}
+        .footer-tag {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
 
-@keyframes scrollLeft {
-    0% { background-position: 0% 0%; }
-    100% { background-position: -200% 0%; }
-}
-
-/* Inner Black Box */
-.inner-box {
-    background: #000 !important;
-    color: #fff !important;
-    border-radius: 11px;
-    width: 100%;
-    padding: 14px;
-    border: none;
-    outline: none;
-    text-align: center;
-    font-weight: 600;
-}
-
-/* Sabhi boxes ke liye ek hi permanent style 
-
-
-
-
-/* Click karne par border gayab hone se bachane ke liye */
-.rgb-container:focus-within, 
-.inner-box:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(255,255,255,0.1);
-}
-
-@keyframes rgbMove {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
-
-
-
-   
-</style>
+        .footer-tag span {
+            color: #9ca3af;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
 
 <div class="card">
+    <h1 class="main-title">👑 CHATHUWA-XMD 👑</h1>
+    <h2 class="sub-title">Pair Code</h2>
 
-<h1 class="rgb-text">👑 𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃 👑</h1>
-<h1 class="rgb-text">PAIR CODE</h1>
+    <div class="input-container">
+        <p class="status-text">Type Your WhatsApp Number</p>
+        <input type="text" id="number" class="inner-box" placeholder="94741336839">
+    </div>
 
-<p class="status rgb-text">TYPE YOUR WHATSAPP NUMBER</p>
+    <button class="btn-action" onclick="getCode()">Get Pair Code</button> 
 
-<div class="rgb-container move-right">
-    <input type="text" id="number" class="inner-box" placeholder="94741336839">
+    <div class="result-container" id="borderBox" style="display:none;">
+        <div id="codeBox">----</div>
+    </div>
+
+    <div class="footer-info">
+        <p class="footer-tag">WHATSAPP BOT</p>
+        <p class="footer-tag">MADE BY <span>CHATHUWA</span></p>
+        <p class="footer-tag" style="margin-top: 8px; font-size: 0.7rem; opacity: 0.7;">CHATHUWA-XMD MINI BOT EDITION 2026</p>
+    </div>
 </div>
-
-<div class="rgb-container move-left">     <button class="inner-box" onclick="getCode()">GET PAIR CODE</button> </div> 
-
-<div class="rgb-container move-right" id="borderBox" style="display:none;">
-    <div class="inner-box" id="codeBox">----</div>
-</div>
-
-<p class="status rgb-text">WHATSAPP BOT</p>
-
-<p class="status rgb-text">MADE BY 𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀</p>
-
-<p class="status rgb-text">𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃 MINI BOT EDITION 2026</p>
-   
-</div>
-
 
 <script>
-  async function getCode() {
-    const num = document.getElementById("number").value.replace(/[^0-9]/g, '');
-    const codeBox = document.getElementById("codeBox");
-    const borderBox = document.getElementById("borderBox");
+    async function getCode() {
+        const num = document.getElementById("number").value.replace(/[^0-9]/g, '');
+        const codeBox = document.getElementById("codeBox");
+        const borderBox = document.getElementById("borderBox");
 
-    // Agar number khali hai
-    if (!num) {
-        borderBox.style.display = "block"; // Box show karo
-        codeBox.style.letterSpacing = "normal"; // Error ke liye spacing normal
-        codeBox.style.color = "#ff4d4d"; // Error color Red
-        codeBox.innerText = "APNA WHATSAPP NUMBER LIKHE";
-        return;
-    }
-
-    // Loading State
-    borderBox.style.display = "block";
-    codeBox.style.letterSpacing = "normal";
-    codeBox.style.color = "#fff"; 
-    codeBox.innerText = "CONNECTING.....";
-
-    try {
-        const res = await fetch(`/code?number=${num}`);
-        const data = await res.json();
-        
-        if (data.code) {
-            codeBox.style.letterSpacing = "4px"; // Code ke liye spacing wapis
-            codeBox.style.color = "#fff"; 
-            codeBox.innerText = data.code;
-        } else {
-            codeBox.style.color = "#ff4d4d";
-            codeBox.innerText = "SERVER FULL";
+        // Input empty validation
+        if (!num) {
+            borderBox.style.display = "block"; 
+            codeBox.style.letterSpacing = "normal"; 
+            codeBox.style.color = "#ef4444"; // Premium soft red for error
+            codeBox.innerText = "PLEASE ENTER YOUR WHATSAPP NUMBER";
+            return;
         }
-    } catch (e) {
-        codeBox.style.color = "#ff4d4d";
-        codeBox.innerText = "SERVER IS FULL";
+
+        // Loading State
+        borderBox.style.display = "block";
+        codeBox.style.letterSpacing = "normal";
+        codeBox.style.color = "#6366f1"; 
+        codeBox.innerText = "CONNECTING.....";
+
+        try {
+            const res = await fetch(`/code?number=${num}`);
+            const data = await res.json();
+            
+            if (data.code) {
+                codeBox.style.letterSpacing = "4px"; 
+                codeBox.style.color = "#10b981"; // Premium success green
+                codeBox.innerText = data.code;
+            } else {
+                codeBox.style.color = "#ef4444";
+                codeBox.innerText = "SERVER FULL";
+            }
+        } catch (e) {
+            codeBox.style.color = "#ef4444";
+            codeBox.innerText = "SERVER IS FULL";
+        }
     }
-}
 
-  
+    function copyCode(code) {
+        navigator.clipboard.writeText(code);
+        const display = document.getElementById('codeBox');
+        const originalText = display.innerText;
 
+        display.innerText = "COPIED";
+        display.style.color = "#10b981";
 
-
-
-
-
-function copyCode(code) {
-    navigator.clipboard.writeText(code);
-    const display = document.querySelector('.code-display');
-    const originalText = display.innerText;
-
-    display.innerText = "COPIED";
-    display.style.borderColor = "var(--success)";
-    display.style.color = "var(--success)";
-
-    setTimeout(() => {
-        display.innerText = originalText;
-        display.style.borderColor = "var(--soft)";
-        display.style.color = "var(--soft)";
-    }, 1500);
-}
-
-// Optional: Simple placeholder sound function
-function playSound(type) {
-    // You can add real sounds here later if you want
-}
+        setTimeout(() => {
+            display.innerText = originalText;
+        }, 1500);
+    }
 </script>
 
 </body>
