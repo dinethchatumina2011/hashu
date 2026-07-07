@@ -15,7 +15,7 @@ cmd({
     });
 
     const msg = await conn.sendMessage(from, {
-      text: `ᥫ᭡𝛧𝜜𝛪𝐷𝛪 𝛭𝐷 𝐵𝜣𝑇 𝛲𝛪𝜨𝐺 𝛪𝛴 𝆺𝅥𓆩 ⏤͟͟͞͞🧸🌷`
+      text: `ᥫＣＨＡＴＨＵＷＡ－ＸＭＤ ＰＩＮＧ`
     }, { quoted: mek });
 
     await sleep(1500);
@@ -32,7 +32,7 @@ cmd({
       if (ping > 100) emoji = "🟡";
       if (ping > 250) emoji = "🔴";
 
-      const display = `ᥫ᭡𝛧𝜜𝛪𝐷𝛪 𝛭𝐷 𝐵𝜣𝑇 𝛲𝛪𝜨𝐺 𝛪𝛴 𝆺𝅥𓆩 ${ping}ms ${emoji} 𓆪⏤͟͟͞͞🧸🌷`;
+      const display = `ＣＨＡＴＨＵＷＡ－ＸＭＤ ＰＩＮＧ ${ping}ms ${emoji} 𓆪⏤͟͟͞͞🧸🌷`;
 
       await conn.relayMessage(from, {
         protocolMessage: {
@@ -51,7 +51,7 @@ cmd({
     const avg = Math.round(pings.reduce((a, b) => a + b, 0) / pings.length);
     const finalEmoji = avg < 100 ? "🚀" : avg < 200 ? "👍" : "🐢";
 
-    const finalDisplay = `ᥫ᭡𝛧𝜜𝛪𝐷𝛪 𝛭𝐷 𝐵𝜣𝑇 𝛲𝛪𝜨𝐺 𝛪𝛴 𝆺𝅥𓆩 ${avg}ms ${finalEmoji} 𓆪⏤͟͟͞͞🧸🌷`;
+    const finalDisplay = `ᥫＣＨＡＴＨＵＷＡ－ＸＭＤ ＰＩＮＧ ${avg}ms ${finalEmoji} 𓆪⏤͟͟͞͞🧸🌷`;
 
     await conn.relayMessage(from, {
       protocolMessage: {
