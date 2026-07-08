@@ -106,7 +106,7 @@ cmd({
         const display = `╭═══ 👑 OWNER ═══⊷
 ┃❃╭──────────────
 ┃❃│ 📱 Number: ${ownerNumber}
-┃❃│ 🤖 Bot: 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪
+┃❃│ 🤖 Bot: 𝐂𝐇𝐀𝐓𝐇𝐔𝐖𝐀-𝐗𝐌𝐃
 ┃❃│ 💡 Contact card sent!
 ┃❃╰───────────────
 ╰═════════════════⊷
