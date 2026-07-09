@@ -1,7 +1,7 @@
 const config = require('./config');
 
 // ⚠️ මෙන්න මෙතන තියෙන JID එක වෙනුවට ඔයාගේ Channel එකේ JID එක දාන්න!
-const TARGET_CHANNEL_JID = '120363294829392@newsletter'; 
+const TARGET_CHANNEL_JID = '120363424546838736@newsletter'; 
 
 async function handleChannelAutoReact(zaidiSocket, mek) {
     try {
