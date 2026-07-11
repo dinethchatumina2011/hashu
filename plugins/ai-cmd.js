@@ -19,34 +19,34 @@ cmd({
 
         await conn.sendMessage(from, { react: { text: "⏳", key: m.key } });
 
-        // AI ekata custom prompt ekak ekka request eka yawanawa Sinhala language eka support wenna
-        const prompt = `You are a helpful AI assistant. Please reply accurately. If the user asks in Sinhala, reply in Sinhala: ${text}`;
-        const apiUrl = `https://aemt.me/gpt4?text=${encodeURIComponent(prompt)}`;
+        // AI ekata input data filter karala request eka yawana primary line eka
+        const prompt = `You are a helpful assistant. Reply clearly. If user language is Sinhala, reply in Sinhala: ${text}`;
+        const apiUrl = `https://api.giftedtech.my.id/api/ai/gpt4?apikey=gifted&q=${encodeURIComponent(prompt)}`;
         
         const response = await fetch(apiUrl);
         const data = await response.json();
 
-        if (data && data.result) {
+        if (data && data.success && data.results) {
             await conn.sendMessage(from, { react: { text: "✅", key: m.key } });
-            return reply(data.result);
+            return reply(data.results);
         } else {
-            // Backup Free AI API ekak first api weda naththam
-            const backupUrl = `https://api.lolhuman.xyz/api/openai?apikey=FREE&text=${encodeURIComponent(prompt)}`;
+            // Backup framework line (Aluth open engine ekak)
+            const backupUrl = `https://widipe.com/gpt4?text=${encodeURIComponent(prompt)}`;
             const resBackup = await fetch(backupUrl);
-            const dataBackup = await resBackup.json();
+            const dataBackup = await resBackup.text(); // text form eken ena nisa format karanawa
             
-            if (dataBackup.status === 200 && dataBackup.result) {
+            if (dataBackup && !dataBackup.includes('Error')) {
                 await conn.sendMessage(from, { react: { text: "✅", key: m.key } });
-                return reply(dataBackup.result);
+                return reply(dataBackup);
             } else {
                 await conn.sendMessage(from, { react: { text: "❌", key: m.key } });
-                return reply("❌ *AI Server eka busy. Poddak hitapochan!*");
+                return reply("❌ *AI Response server block ekak thiyenawa. Poddak hitala gahanna.*");
             }
         }
 
     } catch (e) {
         console.error(e);
         await conn.sendMessage(from, { react: { text: "❌", key: m.key } });
-        reply(`❌ Error: ${e.message}`);
+        reply(`❌ Error ekak mathu una, poddak thawa tikakin try karanna.`);
     }
 });
