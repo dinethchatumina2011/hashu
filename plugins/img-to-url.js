@@ -6,21 +6,21 @@ const fetch = require('node-fetch');
 
 cmd({
     pattern: "url",
-    alias: ["tourl", "imgurl", "makeurl"],
+    alias: ["tourl", "makeurl", "imgurl"],
     react: "🌐",
-    desc: "Convert replied image to a public web URL link",
+    desc: "Convert replied image to an ImgBB public URL link",
     category: "tools",
     use: ".url (reply to an image)",
     filename: __filename
 }, async (conn, mek, m, { from, reply }) => {
     try {
-        // Reply karapu message ekak thiyenawada kiyala check karanawa
+        // Reply karapu message ekak thiyenawada check karanawa
         if (!m.quoted) {
             await conn.sendMessage(from, { react: { text: "❌", key: m.key } });
             return reply("📸 *Ane lamayo, URL ekak karanna ona image ekakata reply karala me command eka gahanna!*");
         }
 
-        // Reply karapu message eka image ekakda kiyala check karanawa
+        // View-once hari normal images check karagannawa
         let quotedMsg = m.quoted;
         let msg = quotedMsg.message;
         if (msg?.viewOnceMessageV2) msg = msg.viewOnceMessageV2.message;
@@ -29,49 +29,52 @@ cmd({
         const type = Object.keys(msg)[0];
         if (type !== "imageMessage") {
             await conn.sendMessage(from, { react: { text: "❌", key: m.key } });
-            return reply("❌ *Meke karanna puluwan Image walata vitharayi!*");
+            return reply("❌ *Meke karanna puluwan Image walata vitharayi lamayo!*");
         }
 
         await conn.sendMessage(from, { react: { text: "⏳", key: m.key } });
 
-        // Image media file eka download karagannawa temporary buffer ekakata
+        // Media file eka buffer ekakata download karagannawa
         const buffer = await quotedMsg.download();
-        const tempPath = `./temp_thumb_${Date.now()}.jpg`;
+        const tempPath = `./temp_${Date.now()}.jpg`;
         fs.writeFileSync(tempPath, buffer);
 
-        // Catbox free hosting server eka form data processing walata use karanawa
+        // ImgBB integration block (Free API structure)
+        // APIKEY kiyana thanata oyaage custom key eka danna puluwan, nathi unath base key eka wada
+        const apiKey = "c08e5e8e78a631bf3c990ee53676c8cb"; 
+        
         const bodyForm = new FormData();
-        bodyForm.append("reqtype", "fileupload");
-        bodyForm.append("fileToUpload", fs.createReadStream(tempPath));
+        bodyForm.append("image", fs.createReadStream(tempPath));
 
-        const response = await fetch("https://catbox.moe/user/api.php", {
+        const response = await fetch(`https://api.imgbb.com/1/upload?key=${apiKey}`, {
             method: "POST",
             body: bodyForm
         });
 
-        const textUrl = await response.text();
+        const data = await response.json();
 
-        // Temporary file eka delete karala clean up karanawa
+        // Temp file clean up pipeline
         if (fs.existsSync(tempPath)) fs.unlinkSync(tempPath);
 
-        if (textUrl && textUrl.includes("https://")) {
+        if (data && data.success && data.data && data.data.url) {
+            const uploadedUrl = data.data.url;
             await conn.sendMessage(from, { react: { text: "✅", key: m.key } });
-            
-            let displayMsg = `╭═══ 🌐 IMAGE TO URL ═══⊷\n`;
-            displayMsg += `┃❃│ ✅ Upload Success\n`;
-            displayMsg += `┃❃│ 🔗 URL: ${textUrl.trim()}\n`;
-            displayMsg += `╰═════════════════════════⊷\n\n`;
+
+            let displayMsg = `╭═══ 🌐 IMAGE TO URL (ImgBB) ═══⊷\n`;
+            displayMsg += `┃❃│ ✅ Dynamic Upload Success\n`;
+            displayMsg += `┃❃│ 🔗 URL: ${uploadedUrl}\n`;
+            displayMsg += `╰══════════════════════════════⊷\n\n`;
             displayMsg += `> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜᴀᴛʜᴜᴡᴀ-xᴍᴅ`;
 
             return reply(displayMsg);
         } else {
             await conn.sendMessage(from, { react: { text: "❌", key: m.key } });
-            return reply("❌ *Server error! Image upload eka fail una.*");
+            return reply("❌ *Hosting server configuration error! Try again later.*");
         }
 
     } catch (e) {
         console.error(e);
         await conn.sendMessage(from, { react: { text: "❌", key: m.key } });
-        reply(`❌ System failure profile error inside download thread.`);
+        reply(`❌ Media sync fail buffer session crashed.`);
     }
 });
