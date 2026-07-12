@@ -40,9 +40,9 @@ cmd({
                 menu += `┃❃│ 📌 *${key}* - ${logoStyles[key].name}\n`;
             }
             
-            menu += `┃❃│\n┃❃│ 📝 *Example:* .logo 1|Zaidi Bot\n`;
+            menu += `┃❃│\n┃❃│ 📝 *Example:* .logo 1|chathu Bot\n`;
             menu += `╰══════════════════════════════⊷\n\n`;
-            menu += `> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪`;
+            menu += `> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜᴀᴛʜᴜᴡᴀ-xᴍᴅ`;
             
             await conn.sendMessage(from, { react: { text: "❌", key: m.key } });
             return reply(menu);
